@@ -25,8 +25,8 @@ function Header() {
         <option value="서울">서울</option>
       </select>
       <select>
-        {data && data.map((d)=> (
-          <option key={d.stationName}>{d.stationName}</option>
+        {data && data.map((data)=> (
+          <option key={data.stationName}>{data.stationName}</option>
         ))}
       </select>
     </div>
