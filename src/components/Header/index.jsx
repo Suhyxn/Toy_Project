@@ -1,7 +1,8 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import * as S from './style'
 
-function Header() {
+export function Header() {
   const [data, setData] = useState(null)
 
   const getData = async () => {
@@ -19,17 +20,16 @@ function Header() {
   }, [data])
 
   return (
-    <div>
-      <div>Header</div>
-      <select name="sidoName">
+    <S.MiddleSort>
+      <S.RegionSelect name="sidoName">
         <option value="서울">서울</option>
-      </select>
-      <select>
+      </S.RegionSelect>
+      <S.RegionSelect>
         {data && data.map((data)=> (
           <option key={data.stationName}>{data.stationName}</option>
         ))}
-      </select>
-    </div>
+      </S.RegionSelect>
+    </S.MiddleSort>
   )
 }
 
