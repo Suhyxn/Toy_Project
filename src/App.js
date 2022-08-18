@@ -1,4 +1,5 @@
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <span to="/post">Post</span> |
         <span to="/register">Register</span>
       </>
+      <Footer />
     </div>
   );
 }
