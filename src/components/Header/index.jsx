@@ -1,23 +1,7 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import * as S from './style'
 
-export function Header() {
-  const [data, setData] = useState(null)
-
-  const getData = async () => {
-    const response = await axios.get('http://localhost:8000/response')
-    console.log(response.data)
-    setData(response.data['body']['items'])
-  }
-
-  useEffect(()=> {
-    getData()
-  }, [])
-
-  useEffect(() => {
-    console.log(data)
-  }, [data])
+export function Header({airdata}) {
 
   return (
     <S.MiddleSort>
@@ -25,7 +9,7 @@ export function Header() {
         <option value="서울">서울</option>
       </S.RegionSelect>
       <S.RegionSelect>
-        {data && data.map((data)=> (
+        {airdata.map((data)=> (
           <option key={data.stationName}>{data.stationName}</option>
         ))}
       </S.RegionSelect>
