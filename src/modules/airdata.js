@@ -12,15 +12,25 @@ const initialState = {
 }
 
 const getParameters = {
-	serviceKey: '아까 위에서 일반 인증키 (Encoding) 이라고 되어있던 부분을 여기 입력해주세요.',
+	serviceKey:'hRL8jDNgntV6amiFWZQPeHEqRu1mbof%2FJP%2BIoqhYt0g7Qs0UtrwOAWjpBy6BThiIK%2FeiTslekA3BQ%2BujQhXHXg%3D%3D',
 	returnType:'json',
 	numOfRows:'100',
 	pageNo:'1',
-	sidoName: '시/도이름',
+	sidoName: '서울',
 	ver:'1.0',
 }
 
 // action
+// export const getAirData = () => async (dispatch, getState) => {
+//   dispatch({type: GET_AIRDATA})
+//   try {
+//     const response = await axios.get('B552584/ArpltnInforInqireSvc/getCtprvnRltmMesureDnsty',{params: getParameters})
+//     dispatch({type: GET_AIRDATA_SUCCESS, payload: {airdata: response.data['body']['items']}})
+//   } catch (e) {
+//     dispatch({type: GET_AIRDATA_ERROR, error: e})
+//   }
+// }
+
 export const getAirData = () => async (dispatch, getState) => {
   dispatch({type: GET_AIRDATA})
   try {
