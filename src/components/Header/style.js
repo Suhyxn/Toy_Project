@@ -7,9 +7,9 @@ export const MiddleSort = styled.div`
 `
 
 export const RegionSelect = styled.select`
-  width: 50px;
-  height: 50px;
-  font-size: 15px;
+  width: 68px;
+  height: 60px;
+  font-size: 22px;
   font-weight: bold;
   border: none;
   margin-right: 10px;
