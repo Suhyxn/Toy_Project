@@ -1,11 +1,7 @@
-import axios from 'axios'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import * as S from './style'
 
-function ContentSquare() {
-  const [data, setData] = useState(null)
-
-  const [sidoName, setSidoName] = useState(null)
+function ContentSquare({airdata}) {
 
   const getParameters = {
     serviceKey:'hRL8jDNgntV6amiFWZQPeHEqRu1mbof%2FJP%2BIoqhYt0g7Qs0UtrwOAWjpBy6BThiIK%2FeiTslekA3BQ%2BujQhXHXg%3D%3D',
@@ -22,27 +18,9 @@ function ContentSquare() {
   //   setData(response.data['items'])
   // }
 
-    const getData = async () => {
-    const response = await axios.get('http://localhost:8000/response',{params: getParameters})
-    console.log(response.data)
-    setData(response.data['body']['items'])
-    setSidoName(response.data['body']['items']['sidoName'])
-    console.log(sidoName)
-  }
-
-  useEffect(()=> {
-    getData()
-  }, [])
-
-  useEffect(() => {
-    console.log(data)
-  }, [data])
-
   return (
-    <div>
-      <div>Content</div>
       <S.Container>
-        {data && data.map((data)=> (
+        {airdata.map((data)=> (
           <S.ContentBox>
             <S.ContentTitle>
               <S.StationName>{data.stationName}</S.StationName>
@@ -56,7 +34,6 @@ function ContentSquare() {
           </S.ContentBox>
         ))}
       </S.Container>
-    </div>
   )
 }
 
