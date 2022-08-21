@@ -13,6 +13,14 @@ export const ContentBox = styled.div`
   background-color: skyblue;
   border-radius: 10%;
   margin-top: 50px;
+
+  .star {
+    color: white;
+    float: right;
+    margin-top: 2px;
+    margin-right: 20px;
+    font-size: 24px;
+  }
 `
 
 export const ContentTitle = styled.div`

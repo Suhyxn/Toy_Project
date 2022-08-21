@@ -1,5 +1,6 @@
 import React from 'react'
 import * as S from './style'
+import { AiOutlineStar } from 'react-icons/ai'
 
 function ContentSquare({airdata}) {
 
@@ -25,6 +26,7 @@ function ContentSquare({airdata}) {
             <S.ContentTitle>
               <S.StationName>{data.stationName}</S.StationName>
               <S.SidoName>{data.sidoName}</S.SidoName>
+              <AiOutlineStar className='star'/>
             </S.ContentTitle>
             <S.ContentIn>
               <S.Pm10Grade>{data.pm10Grade}</S.Pm10Grade>
