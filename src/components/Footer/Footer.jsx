@@ -1,23 +1,29 @@
 import React from 'react'
+import * as S from './style'
 import { IoIosPaw } from 'react-icons/io'
 
 function Footer() {
   return (
-    <div>
-      <div>Footer</div>
-      <div>
+    <S.Container>
+      <S.ContentBox>
         < IoIosPaw />
-        내 지역 보기
-      </div>
-      <div>
+        <div>
+          내 지역 보기
+        </div>
+      </S.ContentBox>
+      <S.ContentBox>
         < IoIosPaw />
-        전체 지도 보기
-      </div>
-      <div>
+        <div>
+          전체 지도 보기
+        </div>
+      </S.ContentBox>
+      <S.ContentBox>
         < IoIosPaw />
-        즐겨찾기
-      </div>
-    </div>
+        <div>
+          즐겨찾기
+        </div>
+      </S.ContentBox>
+    </S.Container>
   )
 }
 
